@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductApi.Migrations
 {
     [DbContext(typeof(MySqlDataContext))]
-    [Migration("20230620225046_bruno")]
-    partial class bruno
+    [Migration("20230623022111_AddProductDatabase")]
+    partial class AddProductDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,6 +59,35 @@ namespace GeekShopping.ProductApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2L,
+                            CategoryName = "TShirt",
+                            Description = "description",
+                            ImageUrl = "GeekShopping.ProductApi\\ShopImages\\2_no_internet.jpg",
+                            Name = "name",
+                            Value = 49m
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            CategoryName = "Card Game",
+                            Description = "Tcg Magic",
+                            ImageUrl = "GeekShopping.ProductApi\\ShopImages\\10_milennium_falcon.jpg",
+                            Name = "Magic",
+                            Value = 99m
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            CategoryName = "Jogo de tabuleiro",
+                            Description = "Jogo de tabuleiro",
+                            ImageUrl = "GeekShopping.ProductApi\\ShopImages\\9_neil.jpg",
+                            Name = "Warhammer",
+                            Value = 299m
+                        });
                 });
 #pragma warning restore 612, 618
         }

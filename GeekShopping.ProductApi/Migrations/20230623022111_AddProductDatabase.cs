@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace GeekShopping.ProductApi.Migrations
 {
     /// <inheritdoc />
-    public partial class bruno : Migration
+    public partial class AddProductDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,6 +37,16 @@ namespace GeekShopping.ProductApi.Migrations
                     table.PrimaryKey("PK_Products", x => x.id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "id", "Category_Name", "Description", "Image_Url", "Name", "Value" },
+                values: new object[,]
+                {
+                    { 2L, "TShirt", "description", "GeekShopping.ProductApi\\ShopImages\\2_no_internet.jpg", "name", 49m },
+                    { 3L, "Card Game", "Tcg Magic", "GeekShopping.ProductApi\\ShopImages\\10_milennium_falcon.jpg", "Magic", 99m },
+                    { 4L, "Jogo de tabuleiro", "Jogo de tabuleiro", "GeekShopping.ProductApi\\ShopImages\\9_neil.jpg", "Warhammer", 299m }
+                });
         }
 
         /// <inheritdoc />

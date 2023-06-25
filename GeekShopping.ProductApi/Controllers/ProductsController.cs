@@ -7,14 +7,15 @@ namespace GeekShopping.ProductApi.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private IProductRepository _repository;
 
-        public ProductController(IProductRepository repository)
+        public ProductsController(IProductRepository repository)
         {
             _repository = repository ??  throw new ArgumentNullException(nameof(repository));
         }
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductVO>>> FindAll()
         {
             var products =  await _repository.FindAll();
@@ -24,7 +25,7 @@ namespace GeekShopping.ProductApi.Controllers
         public async Task<ActionResult<ProductVO>> FindById(long id)
         {
             var product = await _repository.FindById(id);
-            if(product == null) return NotFound();
+            if(product.Id <= 0) return NotFound();
 
             return Ok(product);
         }
