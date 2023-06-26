@@ -6,4 +6,42 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\ShopImages\00_no_image.jpg" />
+    <Content Remove="wwwroot\ShopImages\10_milennium_falcon.jpg" />
+    <Content Remove="wwwroot\ShopImages\11_mars.jpg" />
+    <Content Remove="wwwroot\ShopImages\12_gnu_linux.jpg" />
+    <Content Remove="wwwroot\ShopImages\13_dragon_ball.jpg" />
+    <Content Remove="wwwroot\ShopImages\14_patch_nasa.jpg" />
+    <Content Remove="wwwroot\ShopImages\1_super_mario.jpg" />
+    <Content Remove="wwwroot\ShopImages\2_no_internet.jpg" />
+    <Content Remove="wwwroot\ShopImages\3_vader.jpg" />
+    <Content Remove="wwwroot\ShopImages\4_storm_tropper.jpg" />
+    <Content Remove="wwwroot\ShopImages\5_100_gamer.jpg" />
+    <Content Remove="wwwroot\ShopImages\6_spacex.jpg" />
+    <Content Remove="wwwroot\ShopImages\7_coffee.jpg" />
+    <Content Remove="wwwroot\ShopImages\8_moletom_cobra_kay.jpg" />
+    <Content Remove="wwwroot\ShopImages\9_neil.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\ShopImages\00_no_image.jpg" />
+    <None Include="wwwroot\ShopImages\10_milennium_falcon.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\ShopImages\11_mars.jpg" />
+    <None Include="wwwroot\ShopImages\12_gnu_linux.jpg" />
+    <None Include="wwwroot\ShopImages\13_dragon_ball.jpg" />
+    <None Include="wwwroot\ShopImages\14_patch_nasa.jpg" />
+    <None Include="wwwroot\ShopImages\1_super_mario.jpg" />
+    <None Include="wwwroot\ShopImages\2_no_internet.jpg" />
+    <None Include="wwwroot\ShopImages\3_vader.jpg" />
+    <None Include="wwwroot\ShopImages\4_storm_tropper.jpg" />
+    <None Include="wwwroot\ShopImages\5_100_gamer.jpg" />
+    <None Include="wwwroot\ShopImages\6_spacex.jpg" />
+    <None Include="wwwroot\ShopImages\7_coffee.jpg" />
+    <None Include="wwwroot\ShopImages\8_moletom_cobra_kay.jpg" />
+    <None Include="wwwroot\ShopImages\9_neil.jpg" />
+  </ItemGroup>
+
 </Project>

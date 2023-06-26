@@ -1,0 +1,37 @@
+﻿@model IEnumerable<GeekShopping.web.Models.ProductModel>
+
+<br />
+<br />
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Products NERDS List</h1>
+
+        </div>
+        <div class="col text-end pt-1">
+            <a asp-action="ProductCreate" class="btn btn-outline-primary">
+                <i class=""> Create new product</i>
+            </a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Category</td>
+                <td>Value</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.CategoryName</td>
+                    <td>@((item.Value).ToString("c"))</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
